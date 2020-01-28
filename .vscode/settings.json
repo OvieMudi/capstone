@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "/home/skywalker/Documents/repos/python_playground/capstone/env/bin/python3.7",
+  "python.pythonPath": "/home/skywalker/Documents/Python_Playground/capstone/venv/bin/python3.7",
   "python.linting.pylintEnabled": false,
   "python.linting.pycodestyleEnabled": true,
   "python.linting.enabled": true,

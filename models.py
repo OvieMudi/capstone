@@ -1,6 +1,6 @@
 import os
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum
 from datetime import datetime
 
 db = SQLAlchemy()
@@ -29,7 +29,7 @@ class Actor(db.Model):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     age = Column(Integer, nullable=False)
-    gender = Column(String(8))
+    gender = Column(Enum('male', 'female', 'non-binary', name='gender_types'))
 
     movies = db.relationship('Movie', secondary='Career')
 
