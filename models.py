@@ -2,10 +2,14 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum
 from datetime import datetime
+from environs import Env
+
+env = Env()
+env.read_env('config.env')
 
 db = SQLAlchemy()
 
-DATABASE_PATH = os.environ['DATABASE_URI']
+DATABASE_PATH = env.str('DATABASE_URI')
 
 
 def setup_db(app, database_path=DATABASE_PATH):
