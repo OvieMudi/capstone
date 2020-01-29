@@ -55,7 +55,7 @@ class CapstoneTest(TestCase):
         pass
 
     '''
-      Test for Actors
+      Test Index Route
     '''
 
     def test_get_200_index_route(self):
@@ -64,6 +64,10 @@ class CapstoneTest(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertTrue(body.get('success'))
+
+    '''
+      Test for Actors
+    '''
 
 
 # Make the tests conveniently executable

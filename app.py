@@ -1,11 +1,9 @@
-import os
-from flask import Flask, request, abort, jsonify, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, request, abort, jsonify
 from flask_cors import CORS
 from werkzeug.exceptions import HTTPException
 from models import setup_db, Actor, Movie
 from pagination import paginate_results
-from auth import AuthError, Permissions, requires_auth
+from auth import Permissions, requires_auth
 
 
 def get_json_data(attr):
@@ -54,7 +52,7 @@ def create_app(test_config=None):
     '''
 
     @app.route('/actors')
-    @requires_auth(permissions.read_assets)
+    @requires_auth(permissions.get_actors)
     def get_actors(payload):
         try:
             actors = Actor.query.all()
@@ -72,7 +70,7 @@ def create_app(test_config=None):
             abort(500)
 
     @app.route('/actors/<int:actor_id>')
-    @requires_auth(permissions.read_assets)
+    @requires_auth(permissions.get_actors)
     def get_actor(payload, actor_id):
         try:
             actor = Actor.query.get(actor_id)
@@ -90,7 +88,7 @@ def create_app(test_config=None):
             abort(code)
 
     @app.route('/actors', methods=["POST"])
-    @requires_auth(permissions.post_assets)
+    @requires_auth(permissions.post_actors)
     def post_actors(payload):
         try:
             data = request.get_json()
@@ -111,7 +109,7 @@ def create_app(test_config=None):
             abort(422)
 
     @app.route('/actors/<int:actor_id>', methods=["PATCH"])
-    @requires_auth(permissions.patch_assets)
+    @requires_auth(permissions.patch_actors)
     def patch_actors(payload, actor_id):
         try:
             name = get_json_data('name')
@@ -150,7 +148,7 @@ def create_app(test_config=None):
             abort(422)
 
     @app.route('/actors/<int:actor_id>', methods=["DELETE"])
-    @requires_auth(permissions.delete_assets)
+    @requires_auth(permissions.delete_actors)
     def delete_actors(payload, actor_id):
         try:
             actor = Actor.query.get(actor_id)
@@ -179,7 +177,7 @@ def create_app(test_config=None):
     '''
 
     @app.route('/movies')
-    @requires_auth(permissions.read_assets)
+    @requires_auth(permissions.get_movies)
     def get_movies(payload):
         try:
             movies = Movie.query.all()
@@ -197,7 +195,7 @@ def create_app(test_config=None):
             abort(500)
 
     @app.route('/movies/<int:movie_id>')
-    @requires_auth(permissions.read_assets)
+    @requires_auth(permissions.get_movies)
     def get_movie(payload, movie_id):
         try:
             movie = Movie.query.get(movie_id)
@@ -215,7 +213,7 @@ def create_app(test_config=None):
             abort(code)
 
     @app.route('/movies', methods=["POST"])
-    @requires_auth(permissions.post_assets)
+    @requires_auth(permissions.post_movies)
     def post_movies(payload):
         try:
             data = request.get_json()
@@ -235,7 +233,7 @@ def create_app(test_config=None):
             abort(422)
 
     @app.route('/movies/<int:movie_id>', methods=["PATCH"])
-    @requires_auth(permissions.patch_assets)
+    @requires_auth(permissions.patch_movies)
     def patch_movies(payload, movie_id):
         try:
             title = get_json_data('title')
@@ -270,7 +268,7 @@ def create_app(test_config=None):
             abort(422)
 
     @app.route('/movies/<int:movie_id>', methods=["DELETE"])
-    @requires_auth(permissions.delete_assets)
+    @requires_auth(permissions.delete_movies)
     def delete_movies(payload, movie_id):
         try:
             movie = Movie.query.get(movie_id)
@@ -299,8 +297,8 @@ def create_app(test_config=None):
         return jsonify({
             "success": False,
             "error": 400,
-            "message": error.description
-        }),
+            "message": 'error.description'
+        }), 400
 
     @app.errorhandler(401)
     def auth_error(error):

@@ -17,22 +17,34 @@ class Permissions():
 
     def __init__(
         self,
-        read_assets='read:assets',
-        post_assets='post:assets',
-        patch_assets='patch:assets',
-        delete_assets='delete:assets'
+        get_actors='get:actors',
+        get_movies='get:movies',
+        post_actors='post:actors',
+        post_movies='post:movies',
+        patch_actors='patch:actors',
+        patch_movies='patch:movies',
+        delete_actors='delete:actors',
+        delete_movies='delete:movies'
     ):
-        self.read_assets = read_assets
-        self.post_assets = post_assets
-        self.patch_assets = patch_assets
-        self.delete_assets = delete_assets
+        self.get_actors = get_actors
+        self.get_movies = get_movies
+        self.post_actors = post_actors
+        self.post_movies = post_movies
+        self.patch_actors = patch_actors
+        self.patch_movies = patch_movies
+        self.delete_actors = delete_actors
+        self.delete_movies = delete_movies
 
     def __repr__(self):
         return f'''<Permissions
-         {self.read_assets},
-         {self.post_assets},
-         {self.patch_assets},
-         {self.delete_assets}>'''
+         {self.get_actors},
+         {self.get_movies},
+         {self.post_actors},
+         {self.post_movies},
+         {self.patch_actors},
+         {self.patch_movies},
+         {self.delete_actors},
+         {self.delete_movies}>'''
 
 
 # AuthError Exception
@@ -159,6 +171,7 @@ def requires_auth(permission=''):
         def wrapper(*args, **kwargs):
             try:
                 token = get_token_auth_header()
+                print('X3XY')
                 payload = verify_decode_jwt(token)
                 check_permissions(permission, payload)
 

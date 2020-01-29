@@ -223,7 +223,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"SomeY ActorY\",\n\t\"age\": 37,\n\t\"gender\": \"female\"\n}"
+							"raw": "{\n\t\"name\": \"SomeY ActorY\",\n\t\"age\": 37,\n\t\"gender\": \"female\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "{{host}}/actors",
@@ -270,7 +275,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"SomeY MovieY\",\n\t\"release_date\": \"2018-12-4\"\n}"
+							"raw": "{\n\t\"title\": \"SomeY MovieY\",\n\t\"release_date\": \"2018-12-4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "{{host}}/movies",
@@ -317,12 +327,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Actor011\",\n\t\"age\": 23,\n\t\"gender\": \"female\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"name\": \"Actor011\",\n\t\"age\": 23,\n\t\"gender\": \"female\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/actors/1",
@@ -370,12 +375,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Movie update\",\n\t\"release_date\": \"2019-10-11\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"title\": \"Movie update\",\n\t\"release_date\": \"2019-10-11\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies/1",
@@ -468,7 +468,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "user",
+			"name": "Casting assistant",
 			"item": [
 				{
 					"name": "/",
@@ -699,7 +699,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"SomeY ActorY\",\n\t\"age\": 37,\n\t\"gender\": \"female\"\n}"
+							"raw": "{\n\t\"name\": \"SomeY ActorD\",\n\t\"age\": 37,\n\t\"gender\": \"female\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/actors",
@@ -805,12 +805,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Actor011\",\n\t\"age\": 23,\n\t\"gender\": \"female\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"name\": \"Actor011\",\n\t\"age\": 23,\n\t\"gender\": \"female\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/actors/1",
@@ -864,12 +859,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Movie update\",\n\t\"release_date\": \"2019-10-11\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"title\": \"Movie update\",\n\t\"release_date\": \"2019-10-11\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies/1",
@@ -976,7 +966,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlF6RXlPVUl5TVRnd1F6QkdOVVJCTVRrMU56azNOakUwTlVKR1JEZzROMEpDTlRKQk9UYzFSQSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lNjYuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlMzAyYjQ4ZjJmNTljMGU3MDE0NjQ1NyIsImF1ZCI6Ii9hZ2VuY3kiLCJpYXQiOjE1ODAyMjc5NzgsImV4cCI6MTU4MDMxNDM3OCwiYXpwIjoiSnRqSWYxbG9uMTNCNDR3V2h4aTRiZzhjQ1JBQ1d5bjgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInJlYWQ6YXNzZXRzIl19.kmugTo332JlOAyT-fx9U7VyHBIPI95JxylOgaL0IUMA4rNtVhqgFcqb6JpiyTpZo6sm7R5PhRIB2r4RBa5Fo3bkX6WBj7vJ5Gr1rkqV-K36bhuueAPRvxIaXO0DmGZRJlLRcyjGlFD_naco8Bh3-Xc1qRfq-8frluxWoQ8YD7yIdgg2BpRm3ozQcSIm3SEU6QxXQQIYgf62xiortEM0ye9FPHFL8tmwGwZVm34JAX-JUsEsYqem_CaPswW8bmBEbPvPysN4ZCCzTcGZQqVTvvmwB1p4JQIQALY61tP69V4j2NoPCOwLE2pW5JpEEYTGArZG_UOkkTyN8CEnIXyNrdw",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlF6RXlPVUl5TVRnd1F6QkdOVVJCTVRrMU56azNOakUwTlVKR1JEZzROMEpDTlRKQk9UYzFSQSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lNjYuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlMzAyYjQ4ZjJmNTljMGU3MDE0NjQ1NyIsImF1ZCI6Ii9hZ2VuY3kiLCJpYXQiOjE1ODAyNjQ4NDYsImV4cCI6MTU4MDM1MTI0NiwiYXpwIjoiSnRqSWYxbG9uMTNCNDR3V2h4aTRiZzhjQ1JBQ1d5bjgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIl19.OmomQHggqTd-qMuADn5WvveGSz6RxisapIelOQ4rkE-lUXPaPj7gCumJN1lB5NT3pUBtVeZLuwjlfU68Z4zLmwxPKpbu-zH02F0Mpg8Ww_JCMZy271wP3leXCa59wg78bgbqoiPMLXghxRo8dKgdXkY2CT3iSqAD-Hn8X8eOFNREJbBQNH2PXob9Qk5-QqZcNvBRhaJnitp0PhpaH2IVCjdEWOQpopmKP5x-TglO_L3KUj5K-JAhmdluMKmyoSxgjEe5cEmPmbAYItGlSDiDdjIGuWCAepeNxmEfuOWCjFf-D7WAbo3qCcOq3jAnq6XKTPk3OMGriESZmy8txy24vQ",
 						"type": "string"
 					}
 				]
@@ -1006,7 +996,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "admin",
+			"name": "Casting director",
 			"item": [
 				{
 					"name": "/",
@@ -1255,16 +1245,20 @@
 							"script": {
 								"id": "5050a5b9-2e15-474e-9981-0e61ec8d2ff1",
 								"exec": [
-									"pm.test(\"Status code is 201\", () => {",
-									"    pm.response.to.have.status(201);",
+									"pm.test(\"Status code is 403\", () => {",
+									"    pm.response.to.have.status(403);",
 									"});",
 									"",
-									"pm.test(\"returns expected data\", () => {",
-									"    var jsonData = pm.response.json();",
-									"    console.log(jsonData)",
-									"    pm.expect(jsonData.movie).to.be.an('object');",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"returns correct error data\", () => {",
+									"    pm.expect(jsonData).to.have.all.keys('success', 'error', 'message');",
 									"});",
-									""
+									"",
+									"",
+									"pm.test(\"Return appropriate message\", () => {",
+									"    pm.expect(jsonData.message).contains('Not authorized');",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -1331,12 +1325,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Actor011\",\n\t\"age\": 23,\n\t\"gender\": \"female\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"name\": \"Actor011\",\n\t\"age\": 23,\n\t\"gender\": \"female\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/actors/1",
@@ -1386,12 +1375,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Movie update\",\n\t\"release_date\": \"2019-10-11\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"title\": \"Movie update\",\n\t\"release_date\": \"2019-10-11\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies/1",
@@ -1414,19 +1398,19 @@
 							"script": {
 								"id": "0aea66ad-0a6e-4533-b192-a8b0af746c78",
 								"exec": [
-									"pm.test(\"Status code is 403\", () => {",
-									"    pm.response.to.have.status(403);",
+									"pm.test(\"Status code is 200\", () => {",
+									"    pm.response.to.have.status(200);",
 									"});",
 									"",
 									"var jsonData = pm.response.json();",
 									"",
 									"pm.test(\"returns correct error data\", () => {",
-									"    pm.expect(jsonData).to.have.all.keys('success', 'error', 'message');",
+									"    pm.expect(jsonData).to.have.all.keys('success', 'actor_id', 'message');",
 									"});",
 									"",
 									"",
 									"pm.test(\"Return appropriate message\", () => {",
-									"    pm.expect(jsonData.message).contains('Not authorized');",
+									"    pm.expect(jsonData.success).to.be.true;",
 									"});"
 								],
 								"type": "text/javascript"
@@ -1498,7 +1482,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlF6RXlPVUl5TVRnd1F6QkdOVVJCTVRrMU56azNOakUwTlVKR1JEZzROMEpDTlRKQk9UYzFSQSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lNjYuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlMzAyOWE1NTBlMTVkMGU3MzI0Yjg1ZCIsImF1ZCI6Ii9hZ2VuY3kiLCJpYXQiOjE1ODAyMjc4MDMsImV4cCI6MTU4MDMxNDIwMywiYXpwIjoiSnRqSWYxbG9uMTNCNDR3V2h4aTRiZzhjQ1JBQ1d5bjgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmFzc2V0cyIsInBvc3Q6YXNzZXRzIiwicmVhZDphc3NldHMiXX0.AQYlBvhe-JJpuJS7Ywa-WBTptpbkZcxyaokMs2ZZzCBqSjUeZITLAi3WLlBd8LUYm5XQuqttH6oF1nZ-Irunvvaj-21nYKLS6Kw7djMwbTzUKaqC6eg-45l0M8EVM48YtwpvG4OxCh9b88DeZgUm-UWPAYr3lsLqixG0CWzDjIPHUhj3O68xzQVv4iUrN7_CeF_PafWAu1iouNlT5MUXjQTZHuLYrI4VLF4JKF4ULewWffOyG1gzzHGv-OpGLS_uajGnmQTuLR2PR4AvfaG91XyCkHQfeZO7cfr9vXK8CQObyycz-W1J6AA0fXgFXEd0lupW4ZsiHoyN0BT7cfx40g",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlF6RXlPVUl5TVRnd1F6QkdOVVJCTVRrMU56azNOakUwTlVKR1JEZzROMEpDTlRKQk9UYzFSQSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lNjYuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlMzAyOWE1NTBlMTVkMGU3MzI0Yjg1ZCIsImF1ZCI6Ii9hZ2VuY3kiLCJpYXQiOjE1ODAyNjM5NjMsImV4cCI6MTU4MDM1MDM2MywiYXpwIjoiSnRqSWYxbG9uMTNCNDR3V2h4aTRiZzhjQ1JBQ1d5bjgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIl19.F2iowYTzPvYJUn7Im6M1-wGdtK3rQD0aQx5Wf9u3uBHwhAtO1j856fdEDPz1NUIUqxuvsMWbjP1ZpmJ3pVhks0km6T_LSHv9Rdtrf0tviPWhnCvkk45BrAM6247252aRG2ubDxPG1vF2ZxTsywE4W2dT-u9JCHxrNQwdfvhjqzUQHm_G28nv6_Yjn_0d_7fuK1f7fEl2Nl327UGZU15rQ1QTVtO162T_9MqxldWAuRFGJ-VRULesLvG_uIY4ED7iazrQCZAF592djT2bdhEuUxm5ILLJGs6cP5Ko-yo9MFnCub3f9AzhZkN42UaauLjd2ysphIYmSvAoQlK0jvLxMg",
 						"type": "string"
 					}
 				]
@@ -1528,7 +1512,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "super admin",
+			"name": "executive producer",
 			"item": [
 				{
 					"name": "/",
@@ -1853,12 +1837,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Actor011\",\n\t\"age\": 23,\n\t\"gender\": \"female\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"name\": \"Actor011\",\n\t\"age\": 23,\n\t\"gender\": \"female\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/actors/1",
@@ -1908,12 +1887,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Movie update\",\n\t\"release_date\": \"2019-10-11\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"title\": \"Movie update\",\n\t\"release_date\": \"2019-10-11\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies/1",
@@ -1959,13 +1933,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/actors/1",
+							"raw": "{{host}}/actors/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"actors",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -2002,13 +1976,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/movies/1",
+							"raw": "{{host}}/movies/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"movies",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -2020,7 +1994,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlF6RXlPVUl5TVRnd1F6QkdOVVJCTVRrMU56azNOakUwTlVKR1JEZzROMEpDTlRKQk9UYzFSQSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lNjYuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlMzAyOGM5M2NkYTU2MGU3NTg5M2UwZSIsImF1ZCI6Ii9hZ2VuY3kiLCJpYXQiOjE1ODAyMjc0MzgsImV4cCI6MTU4MDMxMzgzOCwiYXpwIjoiSnRqSWYxbG9uMTNCNDR3V2h4aTRiZzhjQ1JBQ1d5bjgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphc3NldHMiLCJwYXRjaDphc3NldHMiLCJwb3N0OmFzc2V0cyIsInJlYWQ6YXNzZXRzIl19.LVomJFrjrruiG-d0pv7WRGmV7cjYrXXsdGLlJsB4vhxaU1jcMUZt0-mC14I_-tmfn4CvTu4_8mSABHPRZPCTuXwkFI_VGiH_C51UyjjxJi78JW_pMFNq83ts9WST16RyTk4fmvshrE15dGq1dJzQxKzyuNUDmRLjRAPDX5ZCToccohz75CD_dmH3e5XCSHXwPWJbBzj-hZHC6EwQa3Zkos57uz9iLaW7HIX4PmVtihBoy5bkRm5qUK7qlf6q6ioGOuiZprPeCn30Rxf39p860NyeTD3mNttOMwIXLEMv_qaRlUx4CO36AsiV3WAFBRD97L1p2b7LOPPoWOcqhHPVcw",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlF6RXlPVUl5TVRnd1F6QkdOVVJCTVRrMU56azNOakUwTlVKR1JEZzROMEpDTlRKQk9UYzFSQSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lNjYuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlMzAyOGM5M2NkYTU2MGU3NTg5M2UwZSIsImF1ZCI6Ii9hZ2VuY3kiLCJpYXQiOjE1ODAyNjM4MDEsImV4cCI6MTU4MDM1MDIwMSwiYXpwIjoiSnRqSWYxbG9uMTNCNDR3V2h4aTRiZzhjQ1JBQ1d5bjgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.H8-dYT7cmY2soh3MICyNA4FjGim_mfmNxD1mrhjW-uhojI-o6vvnPzSfD9jnienZZ5JnazwyjSFZl-wGCCD8hISAcqXzkOSSGNK9lJhPujWPjpgOXR7qEX-9fLvkW_MQpBxC7huae6ChMysGK28aHnrOO3HJm6b5tQiXWsTcOdX-7sjuRnFtmkt_00CKF-pI4Gczd7Et9GHRCVrT1Lh5Hr4QA4PpcqIJeZiEkO_ytoxCcUWffGvIkHdVewH_uPcWwt0q6_TnjwprqW8WK1bNXfsUFDUJhKkXIg_sJ5fJ0j40xG62cbhUoRaKNpE94qfTAQnjNiNnvKtUc72cJbLDeQ",
 						"type": "string"
 					}
 				]

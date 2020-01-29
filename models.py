@@ -1,4 +1,3 @@
-import os
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum
 from datetime import datetime
