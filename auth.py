@@ -111,7 +111,7 @@ def verify_decode_jwt(token):
         raise AuthError({
             'code': ex,
             'description': ex
-        }, 400)
+        }, 401)
 
     rsa_key = {}
     if 'kid' not in unverified_header:
@@ -171,7 +171,6 @@ def requires_auth(permission=''):
         def wrapper(*args, **kwargs):
             try:
                 token = get_token_auth_header()
-                print('X3XY')
                 payload = verify_decode_jwt(token)
                 check_permissions(permission, payload)
 

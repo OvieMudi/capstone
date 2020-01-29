@@ -82,6 +82,9 @@ def create_app(test_config=None):
                 'actor': actor.format()
             })
 
+        except HTTPException as err:
+            abort(err.code, err.description)
+
         except Exception as ex:
             print(ex)
             code = getattr(ex, 'code', 422)
@@ -96,13 +99,20 @@ def create_app(test_config=None):
             age = data.get('age', None)
             gender = data.get('gender', None)
 
+            if not name or not age or not gender:
+                abort(400)
+
             actor = Actor(name, age, gender)
             actor.insert()
 
             return jsonify({
                 'success': True,
+                'message': 'created',
                 'actor': actor.format()
             }), 201
+
+        except HTTPException as err:
+            abort(err.code, err.description)
 
         except Exception as ex:
             print(ex)
@@ -207,6 +217,9 @@ def create_app(test_config=None):
                 'movie': movie.format()
             })
 
+        except HTTPException as err:
+            abort(err.code, err.description)
+
         except Exception as ex:
             print(ex)
             code = getattr(ex, 'code', 422)
@@ -220,13 +233,20 @@ def create_app(test_config=None):
             title = data.get('title', None)
             release_date = data.get('release_date', None)
 
+            if not title or not requires_auth:
+                abort(400, 'A valid input is required')
+
             movie = Movie(title, release_date)
             movie.insert()
 
             return jsonify({
                 'success': True,
+                'message': 'created',
                 'movie': movie.format()
             }), 201
+
+        except HTTPException as err:
+            abort(err.code, err.description)
 
         except Exception as ex:
             print(ex)
@@ -292,6 +312,10 @@ def create_app(test_config=None):
             print(ex)
             abort(422)
 
+    '''
+        Error handlers
+    '''
+
     @app.errorhandler(400)
     def invalid_request(error):
         return jsonify({
@@ -302,8 +326,6 @@ def create_app(test_config=None):
 
     @app.errorhandler(401)
     def auth_error(error):
-        # print('errorxxx: ', error.error)
-
         return jsonify({
             "success": False,
             "error": 401,
