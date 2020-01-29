@@ -8,7 +8,7 @@ from models import Actor, Movie, setup_db
 from configparser import ConfigParser
 
 env = Env()
-env.read_env('config.env')
+env.read_env()
 
 # Read jwt tokens from text file
 config = ConfigParser()
@@ -32,7 +32,7 @@ class CapstoneTest(TestCase):
         self.app = create_app()
         self.client = self.app.test_client
         self.database_name = "capstone_test"
-        self.database_path = env.str('TEST_DATABASE_URI')
+        self.database_path = env.str('TEST_DATABASE_URL')
         setup_db(self.app, self.database_path)
 
         self.new_valid_movie = {

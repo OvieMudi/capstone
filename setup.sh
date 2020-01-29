@@ -8,4 +8,4 @@ python manage.py db init
 python manage.py db migrate
 python manage.py db upgrade
 python manage.py seed_base
-# python manage.py seed_relationship
+python manage.py seed_relationship
