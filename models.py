@@ -9,7 +9,6 @@ env.read_env()
 db = SQLAlchemy()
 
 DATABASE_PATH = env.str('DATABASE_URL')
-print('DATABASE_PATH: ', DATABASE_PATH)
 
 
 def setup_db(app, database_path=DATABASE_PATH):
