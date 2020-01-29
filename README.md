@@ -9,7 +9,7 @@ Capstone also houses a large database of actors and movies around the world.
 
 A running API is deployed on [Heroku](https://heroku.com). Explore the API with [Postman](https://www.getpostman.com/) via the URL https://capstone66.herokuapp.com/.
 
-Kindly see the `jwt_tokens.txt` for test tokens.
+Kindly see the [jwt_tokens.txt](https://github.com/OvieMudi/capstone/blob/develop/jwt_tokens.txt) file for test tokens.
 
 ### Installing Dependencies
 
@@ -76,7 +76,7 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `app.py` f
 ## Endpoints
 
 The endpoints of this API are protected with JWT. A valid token is required to interract with endpoints.
-Kindly check the `jwt_tokens.txt` file in repo for sample tokens for test.
+Kindly check the [jwt_tokens.txt](https://github.com/OvieMudi/capstone/blob/develop/jwt_tokens.txt) file in repo for sample tokens for test.
 _Tokens will expire 24 hours after being generated_
 
 ```bash
